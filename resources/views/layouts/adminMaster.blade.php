@@ -72,7 +72,7 @@
                         <li class="dropdown dropdown-user">
                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                 <img alt="" class="img-circle" src="{{ URL::asset('assets/img/profile/team8.jpg') }}" />
-                                <span class="username username-hide-on-mobile"> Muendi </span>
+                                <span class="username username-hide-on-mobile"> {{ Auth::user()->middle_name }} {{ Auth::user()->last_name }} </span>
                                 <i class="fa fa-angle-down"></i>
                             </a>
 
@@ -169,7 +169,7 @@
                         <!-- BEGIN EVENTS SIDE MENU -->
                         <li class="nav-item @yield('events-active') ">
                             <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="fa fa-bath"></i>
+                                <i class="fa fa-bed"></i>
                                 <span class="title">Rooms</span>
                                 <span class="arrow"></span>
                             </a>
@@ -311,16 +311,16 @@
                         <!-- END MESSAGE SIDE MENU -->
 
                         <!-- BEGIN MESSAGE SIDE MENU -->
-                        <!--
+                        
                         <li class="heading">
-                            <h3 class="uppercase">Pages</h3>
+                            <h3 class="uppercase">Statistics</h3>
                         </li>
                         
                         
                         <li class="nav-item @yield('pages-active') ">
                             <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="fa fa-file"></i>
-                                <span class="title">Home</span>
+                                <i class="fa fa-home"></i>
+                                <span class="title">Houses</span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
@@ -351,7 +351,42 @@
                                 </li>
                             </ul>
                         </li>
-                        -->
+
+                        <li class="nav-item @yield('pages-active') ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-bed"></i>
+                                <span class="title">Rooms</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="" class="nav-link ">
+                                        <span class="title">Header</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="" class="nav-link ">
+                                        <span class="title">About</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">Services Title</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">Events Title</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">Contact Title</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
                         <!-- END MESSAGE SIDE MENU -->
                                 
                     </ul>
