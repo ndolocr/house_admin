@@ -55,7 +55,7 @@
                                     <a href="" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
                                 </td>
                                 <td>
-                                    <a href="" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
+                                    <a href="{{ route('delete-house', $house->id) }}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
                                 </td>
                             </tr>
                         @endforeach

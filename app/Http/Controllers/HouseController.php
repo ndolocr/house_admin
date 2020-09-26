@@ -150,7 +150,10 @@ class HouseController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $house = House::find($id);
+        $house->delete();
+
+        return redirect()->route('all-houses')->with('success', 'Record Successfully Deleted!');
     }
 
     public function delete($id)
