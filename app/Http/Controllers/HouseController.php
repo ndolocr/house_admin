@@ -109,7 +109,37 @@ class HouseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //Find relevant record to be updated
+        $house = House::find($id);
+
+        //Perform Validations
+        $this->validate(
+            $request,
+            [
+                'house_name'=>'required',
+                'county'=>'required',
+                'street'=>'required',
+                'section'=>'required',
+                'details'=>'required',
+                'plot_number'=>'required',
+                'land_reference'=>'required'
+            ]
+        );
+
+        //Assign Request values to database fields
+        $house->name = $request->get('house_name');
+        $house->county = $request->get('county');
+        $house->street = $request->get('street');
+        $house->section = $request->get('section');
+        $house->details = $request->get('details');
+        $house->plot_number = $request->get('plot_number');
+        $house->land_reference = $request->get('land_reference');
+
+        //Save request data
+        $house->save();
+
+        //Redirect to view all page
+        return redirect()->route('all-houses')->with('success', 'Record Successfully Updated!');   
     }
 
     /**
