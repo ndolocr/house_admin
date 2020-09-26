@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\House;
 use Illuminate\Http\Request;
 
 class HouseController extends Controller
@@ -39,7 +40,34 @@ class HouseController extends Controller
      */
     public function store(Request $request)
     {
-        return "Saving House Information";
+        //Perform Validations
+        $this->validate(
+            $request,
+            [
+                'name'=>'required',
+                'county'=>'required',
+                'street'=>'required',
+                'section'=>'required',
+                'details'=>'required',
+                'plot_number'=>'required',
+                'land_reference'=>'required'
+            ]
+        );
+
+        //Initialize new object
+        $house = new House;
+
+        //Assign Request values to database fields
+        $house->name = $request->get('name');
+        $house->county = $request->get('county');
+        $house->street = $request->get('street');
+        $house->section = $request->get('section');
+        $house->details = $request->get('details');
+        $house->plot_number = $request->get('plot_number');
+        $house->land_reference = $request->get('land_reference');
+
+        //Save request data
+        $house->save();
     }
 
     /**

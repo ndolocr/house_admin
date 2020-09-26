@@ -22,5 +22,5 @@ Auth::routes();
 //Route::get('/house/create', 'HouseController@create')->name('create-house');
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+Route::post('/house/store', [App\Http\Controllers\HouseController::class, 'store'])->name('store-house');
 Route::get('/house/create', [App\Http\Controllers\HouseController::class, 'create'])->name('create-house');
-Route::post('/house/store', [App\Http\Controllers\HouseController::class, 'store'], 'store')->name('store-house');
