@@ -158,7 +158,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="" class="nav-link ">
+                                    <a href="{{ route('all-houses') }}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                

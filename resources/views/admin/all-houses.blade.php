@@ -60,11 +60,11 @@
                             </tr>
                         @endforeach
                         <tr>
-                            <td colspan="7"> {{ $houses->links() }} </td>
+                            <td colspan="8"> {{ $houses->links() }} </td>
                         </tr>
                     @else
                         <tr>
-                            <td colspan="7"> No records Available! </td>
+                            <td colspan="8"> No records Available! </td>
                         </tr>
 
                     @endif

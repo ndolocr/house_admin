@@ -161,7 +161,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-address-card"></i>
                                         </span>
-                                        {{ Form::number('land_reference', '', ['class' => 'form-control', 'id' => 'land_reference', 'placeholder' => 'Land Reference']) }}
+                                        {{ Form::text('land_reference', '', ['class' => 'form-control', 'id' => 'land_reference', 'placeholder' => 'Land Reference']) }}
                                     </div>
 
                                 </div>

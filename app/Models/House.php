@@ -1,14 +1,17 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class house extends Model
+class House extends Model
 {
-	protected $fillable = ['name', 'details', 'street', 'county', 'section', 'plot_number', 'land_reference'];
+    use HasFactory;
+
+    protected $fillable = ['name', 'details', 'street', 'county', 'section', 'plot_number', 'land_reference'];
 	
     public function room(){
-    	return this->hasMany(Room::class);
+    	return $this->hasMany(Room::class);
     }
 }

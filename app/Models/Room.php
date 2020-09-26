@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-use App\House;
+use App\Models\House;
 use Illuminate\Database\Eloquent\Model;
 
 class Room extends Model
@@ -9,6 +9,6 @@ class Room extends Model
 	protected $fillable = ['name', 'status'];
 	
     public function house(){
-    	retun this->belongsTo(House::class);
+    	return $this->belongsTo(House::class);
     }
 }

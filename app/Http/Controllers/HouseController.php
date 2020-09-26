@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\House;
+use App\Http\Controllers\Controller;
+use App\Models\House;
 use Illuminate\Http\Request;
 
 class HouseController extends Controller
@@ -20,7 +21,7 @@ class HouseController extends Controller
     public function index()
     {
         //Get data from database
-        $houses = House::orderBy('create_at')->pagination(6);
+        $houses = House::orderBy('created_at')->paginate(6);
 
         return view('admin.all-houses', compact('houses'));
     }
@@ -47,7 +48,7 @@ class HouseController extends Controller
         $this->validate(
             $request,
             [
-                'name'=>'required',
+                'house_name'=>'required',
                 'county'=>'required',
                 'street'=>'required',
                 'section'=>'required',
@@ -61,7 +62,7 @@ class HouseController extends Controller
         $house = new House;
 
         //Assign Request values to database fields
-        $house->name = $request->get('name');
+        $house->name = $request->get('house_name');
         $house->county = $request->get('county');
         $house->street = $request->get('street');
         $house->section = $request->get('section');
