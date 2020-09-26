@@ -15,8 +15,8 @@
         <div class="col-md-12">
 
             <!-- BEGIN PAGE TITLE-->
-            <h3 class="page-title"> House
-                <small>add</small>
+            <h3 class="page-title"> Houses
+                <small>edit</small>
             </h3>
             <!-- END PAGE TITLE-->
             
@@ -25,13 +25,13 @@
             <!-- END MESSAGES -->
             
             <!-- BEGIN FORM CREATION -->
-            {!! Form::Open( ['route' => 'store-house', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
+            {!! Form::Open( ['route' => ['edit-house', $house->id], 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
                 
                 <!-- BEGIN FIRST FORM SECTION COLUMN-->
                 <div class="col-md-6">
                     
                     <!-- BEGIN SAMPLE FORM PORTLET-->
-                    <div class="portlet light bordered" style="height: 320px">
+                    <div class="portlet light bordered" style="height: 350px">
                         
                         <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
@@ -55,7 +55,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-info"></i>
                                         </span>
-                                        {{ Form::text('house_name', '', ['class' => 'form-control', 'id' => 'house_name', 'placeholder' => 'House Name']) }}
+                                        {{ Form::text('house_name', $house->name, ['class' => 'form-control', 'id' => 'house_name', 'placeholder' => 'House Name']) }}
                                     </div>
 
                                 </div>
@@ -70,7 +70,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-road"></i>
                                         </span>
-                                        {{ Form::text('street', '', ['class' => 'form-control', 'id' => 'street', 'placeholder' => 'Street']) }}
+                                        {{ Form::text('street', $house->street, ['class' => 'form-control', 'id' => 'street', 'placeholder' => 'Street']) }}
                                     </div>
 
                                 </div>
@@ -85,11 +85,13 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-map"></i>
                                         </span>
-                                        {{ Form::text('county', '', ['class' => 'form-control', 'id' => 'county', 'placeholder' => 'County']) }}
+                                        {{ Form::text('county', $house->county, ['class' => 'form-control', 'id' => 'county', 'placeholder' => 'County']) }}
                                     </div>
 
                                 </div>
                                 <!-- END FORM GROUP -->
+
+                                
 
                             </div>
                         
@@ -107,7 +109,7 @@
                 <div class="col-md-6">
                     
                     <!-- BEGIN SAMPLE FORM PORTLET-->
-                    <div class="portlet light bordered" style="height: 320px">
+                    <div class="portlet light bordered" style="height: 350px">
                         
                         <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
@@ -131,7 +133,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-stop"></i>
                                         </span>
-                                        {{ Form::text('section', '', ['class' => 'form-control', 'id' => 'section', 'placeholder' => 'Section']) }}
+                                        {{ Form::text('section', $house->section, ['class' => 'form-control', 'id' => 'section', 'placeholder' => 'Section']) }}
                                     </div>
 
                                 </div>
@@ -146,7 +148,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-sort-numeric-asc"></i>
                                         </span>
-                                        {{ Form::text('plot_number', '', ['class' => 'form-control', 'id' => 'plot_number', 'placeholder' => 'Plot Number']) }}
+                                        {{ Form::text('plot_number', $house->plot_number, ['class' => 'form-control', 'id' => 'plot_number', 'placeholder' => 'Plot Number']) }}
                                     </div>
 
                                 </div>
@@ -161,7 +163,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-address-card"></i>
                                         </span>
-                                        {{ Form::text('land_reference', '', ['class' => 'form-control', 'id' => 'land_reference', 'placeholder' => 'Land Reference']) }}
+                                        {{ Form::text('land_reference', $house->land_reference, ['class' => 'form-control', 'id' => 'land_reference', 'placeholder' => 'Land Reference']) }}
                                     </div>
 
                                 </div>
@@ -185,14 +187,14 @@
                     <!-- BEGIN SAMPLE FORM PORTLET-->
                     <div class="portlet light bordered" style="height: 600px">
                         
-                        <!-- BEGIN FORM DESCRIPTION -->
+                        <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
                             <div class="caption font-red-sunglo">
                                 <i class="icon-info font-red-sunglo"></i>
                                 <span class="caption-subject bold uppercase"> House Details </span>
                             </div>                                   
                         </div>
-                        <!-- END FORM DESCRIPTION -->
+                        <!-- END FORM TITLE -->
                         
                         <!-- CREATE FORM BODY -->
                         <div class="portlet-body form">
@@ -202,7 +204,7 @@
                                 <div class="form-group">
                                     
                                     <div class="input-group">
-                                        {{ Form::textarea('details', '', ['class' => 'ckeditor form-control', 'id' => 'details']) }}
+                                        {{ Form::textarea('details', $house->details, ['class' => 'ckeditor form-control', 'id' => 'details']) }}
                                     </div>
 
                                 </div>
@@ -210,7 +212,8 @@
                                 
                                 <!-- BEGIN FORM ACTION SECTION -->
                                 <div class="form-actions" style="border: none !important">
-                                    {{  Form::submit('Save', ['class' => 'btn blue uppercase']) }}
+                                    {{ Form::hidden('_method', 'PUT') }}
+                                    {{ Form::submit('Save', ['class' => 'btn blue uppercase']) }}
                                     {{ Form::reset('Cancel', ['class' => 'btn red uppercase']) }}
                                 </div>
                                 <!-- BEGIN FORM ACTION SECTION -->
