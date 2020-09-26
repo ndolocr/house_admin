@@ -19,7 +19,10 @@ class HouseController extends Controller
 
     public function index()
     {
-        //
+        //Get data from database
+        $houses = House::orderBy('create_at')->pagination(6);
+
+        return view('admin.all-houses', compact('houses'));
     }
 
     /**
@@ -68,6 +71,9 @@ class HouseController extends Controller
 
         //Save request data
         $house->save();
+
+        //Redirect to view all page
+        return redirect()->route('all-houses')->with('success', 'Record Successfully Saved!');
     }
 
     /**
