@@ -26,4 +26,6 @@ Route::get('/house', [App\Http\Controllers\HouseController::class, 'index'])->na
 Route::post('/house/store', [App\Http\Controllers\HouseController::class, 'store'])->name('store-house');
 Route::get('/house/edit/{id}', [App\Http\Controllers\HouseController::class, 'edit'])->name('edit-house');
 Route::get('/house/create', [App\Http\Controllers\HouseController::class, 'create'])->name('create-house');
+Route::put('/house/edit/{id}', [App\Http\Controllers\HouseController::class, 'update'])->name('update-house');
+
 
