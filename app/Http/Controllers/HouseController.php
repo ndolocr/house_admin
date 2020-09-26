@@ -152,4 +152,11 @@ class HouseController extends Controller
     {
         //
     }
+
+    public function delete($id)
+    {
+        $house = House::find($id);
+
+        return view('admin.delete-house', compact('house'));
+    }
 }
