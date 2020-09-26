@@ -96,7 +96,8 @@ class HouseController extends Controller
      */
     public function edit($id)
     {
-        //
+        $house = House::find($id);
+        return view('admin.edit-house', compact('house'));
     }
 
     /**
