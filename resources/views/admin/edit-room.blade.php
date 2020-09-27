@@ -25,7 +25,7 @@
             <!-- END MESSAGES -->
             
             <!-- BEGIN FORM CREATION -->
-            {!! Form::Open( ['route' => 'store-room', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
+            {!! Form::Open( ['route' => ['update-room', $data->id], 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
                 
                 <!-- BEGIN FIRST FORM SECTION COLUMN-->
                 <div class="col-md-6">
@@ -182,7 +182,8 @@
                                 
                                 <!-- BEGIN FORM ACTION SECTION -->
                                 <div class="form-actions" style="border: none !important">
-                                    {{  Form::submit('Save', ['class' => 'btn blue uppercase']) }}
+                                    {{ Form::hidden('_method', 'PUT') }}
+                                    {{ Form::submit('Save', ['class' => 'btn blue uppercase']) }}
                                     {{ Form::reset('Cancel', ['class' => 'btn red uppercase']) }}
                                 </div>
                                 <!-- BEGIN FORM ACTION SECTION -->
