@@ -14,7 +14,9 @@ class RoomController extends Controller
      */
     public function index()
     {
-        //
+        $rooms = Room::orderBy('created_at')->paginate(6);
+
+        return view('admin.all-rooms', compact('rooms'));
     }
 
     /**
