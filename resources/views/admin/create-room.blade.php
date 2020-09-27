@@ -48,14 +48,13 @@
 
                                 <!-- BEGIN FORM GROUP -->
                                 <div class="form-group">
-                                    
-                                    {{ Form::label('room_name', 'Room Name') }}
+                                    <label name="room_name" >Room Name</label>
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="fa fa-info"></i>
                                         </span>
-                                        {{ Form::text('room_name', '', ['class' => 'form-control', 'id' => 'room_name', 'placeholder' => 'Room Name']) }}
+                                        <input type="text" name="room_name" id="room_name" class="form-control" placeholder="Room Name">
                                     </div>
 
                                 </div>
@@ -68,9 +67,13 @@
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
-                                            <i class="fa fa-sort-numeric-asc"></i>
+                                            <i class="fa fa-question"></i>
                                         </span>
-                                        {{ Form::text('status', '', ['class' => 'form-control', 'id' => 'status', 'placeholder' => 'Room Status']) }}
+                                        <select name="status" id="status" class="form-control" >
+                                            <option value="open"> Open </option>
+                                            <option value="renovation"> Under Renovation </option>
+                                            <option value="occupied"> Occupied </option>
+                                        </select>
                                     </div>
 
                                 </div>
@@ -114,9 +117,11 @@
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
-                                            <i class="fa fa-stop"></i>
+                                            <i class="fa fa-home"></i>
                                         </span>
-                                        {{ Form::text('house', '', ['class' => 'form-control', 'id' => 'house', 'placeholder' => 'House']) }}
+                                        <select name="house" id="house" class="form-control">
+                                            <option value=""></option>
+                                        </select>
                                     </div>
 
                                 </div>
