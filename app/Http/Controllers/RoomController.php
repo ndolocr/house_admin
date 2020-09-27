@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Room;
+use App\Models\House;
 use Illuminate\Http\Request;
 
 class RoomController extends Controller
@@ -23,7 +24,8 @@ class RoomController extends Controller
      */
     public function create()
     {
-        return view('admin.create-room');
+        $house = House::all();
+        return view('admin.create-room', compact('house'));
     }
 
     /**
