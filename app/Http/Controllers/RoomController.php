@@ -86,7 +86,9 @@ class RoomController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Room::find($id);
+
+        return view('admin.edit-room', compact('data'));
     }
 
     /**
