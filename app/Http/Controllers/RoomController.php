@@ -81,4 +81,8 @@ class RoomController extends Controller
     {
         //
     }
+
+    public function delete($id){
+        //
+    }
 }
