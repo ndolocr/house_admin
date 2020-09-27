@@ -33,4 +33,10 @@ Route::delete('/house/destroy/{id}', [App\Http\Controllers\HouseController::clas
 
 //Room Routes
 Route::get('/rooms', [App\Http\Controllers\RoomController::class, 'index'])->name('all-rooms');
-
+Route::post('/room/store', [App\Http\Controllers\RoomController::class, 'store'])->name('store-room');
+Route::get('/room/edit/{id}', [App\Http\Controllers\RoomController::class, 'edit'])->name('edit-room');
+Route::get('/room/show/{id}', [App\Http\Controllers\RoomController::class, 'show'])->name('show-room');
+Route::get('/room/create', [App\Http\Controllers\RoomController::class, 'create'])->name('create-room');
+Route::get('/room/delete/{id}', [App\Http\Controllers\RoomController::class, 'delete'])->name('delete-room');
+Route::put('/room/update/{id}', [App\Http\Controllers\RoomController::class, 'update'])->name('update-room');
+Route::delete('/room/destroy/{id}', [App\Http\Controllers\RoomController::class, 'destroy'])->name('destroy-room');

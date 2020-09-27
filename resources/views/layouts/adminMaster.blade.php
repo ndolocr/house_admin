@@ -167,7 +167,7 @@
                         <!-- END CLIENT SIDE MENU -->
                         
                         <!-- BEGIN EVENTS SIDE MENU -->
-                        <li class="nav-item @yield('events-active') ">
+                        <li class="nav-item @yield('rooms-active') ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-bed"></i>
                                 <span class="title">Rooms</span>
@@ -180,7 +180,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="" class="nav-link ">
+                                    <a href="{{ route('all-rooms') }}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
