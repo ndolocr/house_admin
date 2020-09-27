@@ -107,7 +107,10 @@ class RoomController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Room::find($id);
+        $data->delete();
+
+        return redirect()->route('all-rooms')->with('success', 'Record Successfully Deleted!');
     }
 
     public function delete($id){
