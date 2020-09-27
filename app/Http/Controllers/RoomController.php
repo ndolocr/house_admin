@@ -86,9 +86,10 @@ class RoomController extends Controller
      */
     public function edit($id)
     {
-        $data = Room::find($id);
+        $house      = House::all();
+        $data       = Room::find($id);
 
-        return view('admin.edit-room', compact('data'));
+        return view('admin.edit-room', compact('data', 'house'));
     }
 
     /**
@@ -100,7 +101,31 @@ class RoomController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //Finding record to be edited
+        $room = Room::find($id);
+
+        //Perform Validations
+        $this->validate(
+            $request,
+            [
+                'status'=>'required',
+                'details'=>'required',
+                'house_id'=>'required',
+                'room_name'=>'required'
+            ]
+        );
+
+        //Assign Request values to database fields
+        $room->status       = $request->get('status');
+        $room->details      = $request->get('details');
+        $room->house_id     = $request->get('house_id');
+        $room->name         = $request->get('room_name');
+
+        //Save request data
+        $room->save();
+
+        //Redirect to view all page
+        return redirect()->route('all-rooms')->with('success', 'Record Successfully Updated!');
     }
 
     /**
