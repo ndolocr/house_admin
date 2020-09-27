@@ -49,10 +49,10 @@
                                 <td> {{ $house->county }} </td>
                                 <td> {{ $house->street}} </td>
                                 <td>
-                                    <a href="{{ route('edit-house', $house->id) }}" class='btn green btn-outline sbold uppercase'> <i class='fa fa-eye'></i> </a>
+                                    <a href="{{ route('show-house', $house->id) }}" class='btn green btn-outline sbold uppercase'> <i class='fa fa-eye'></i> </a>
                                 </td>
                                 <td> 
-                                    <a href="" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
+                                    <a href="{{ route('edit-house', $house->id) }}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
                                 </td>
                                 <td>
                                     <a href="{{ route('delete-house', $house->id) }}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>

@@ -87,7 +87,7 @@ class HouseController extends Controller
     {
         $house = House::find($id);
 
-        return view('admin.show-house', compact('house'));
+        return view('admin.single-house', compact('house'));
     }
 
     /**
