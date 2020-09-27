@@ -175,7 +175,7 @@
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="" class="nav-link ">
+                                    <a href="{{ route('create-room') }}" class="nav-link ">
                                         <span class="title">Add New</span>
                                     </a>
                                 </li>
