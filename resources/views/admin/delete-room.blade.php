@@ -46,10 +46,10 @@
                     
                     <tr>    
                         <td style="text-align: center;">
-                            <a href="{{ route('all-houses') }}" class='btn green btn-outline sbold uppercase'> Cancel  </a>
+                            <a href="{{ route('all-rooms') }}" class='btn green btn-outline sbold uppercase'> Cancel  </a>
                         </td>
                         <td> 
-                            {!! Form::open(['route'=>['destroy-house', $house->id], 'method'=>'POST']) !!}
+                            {!! Form::open(['route'=>['destroy-room', $room->id], 'method'=>'POST']) !!}
 
                                 {{ Form::hidden('_method', 'DELETE') }}
                                 {{ Form::submit('Delete', ['class'=>'btn red btn-outline sbold uppercase']) }}
