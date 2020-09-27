@@ -36,7 +36,31 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Perform Validations
+        $this->validate(
+            $request,
+            [
+                'status'=>'required',
+                'details'=>'required',
+                'house_id'=>'required',
+                'room_name'=>'required'
+            ]
+        );
+
+        //Initialize new object
+        $room = new Room;
+
+        //Assign Request values to database fields
+        $room->status       = $request->get('status');
+        $room->details      = $request->get('details');
+        $room->house_id     = $request->get('house_id');
+        $room->name         = $request->get('room_name');
+
+        //Save request data
+        $room->save();
+
+        //Redirect to view all page
+        return redirect()->route('all-rooms')->with('success', 'Record Successfully Saved!');
     }
 
     /**

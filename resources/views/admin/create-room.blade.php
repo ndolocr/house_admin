@@ -6,7 +6,7 @@
 
 @section('page-title') Room @endsection
 
-@section('room-active') start active open @endsection
+@section('rooms-active') start active open @endsection
 
 @section('content')
     <!-- BEGIN ROW -->
@@ -70,7 +70,7 @@
                                             <i class="fa fa-question"></i>
                                         </span>
                                         <select name="status" id="status" class="form-control" >
-                                            <option value="open"> Open </option>
+                                            <option value="vacant"> Vacant </option>
                                             <option value="renovation"> Under Renovation </option>
                                             <option value="occupied"> Occupied </option>
                                         </select>
@@ -113,13 +113,13 @@
                                 <!-- BEGIN FORM GROUP -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('house', 'Select House') }}
+                                    {{ Form::label('house_id', 'Select House') }}
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="fa fa-home"></i>
                                         </span>
-                                        <select name="house" id="house" class="form-control">
+                                        <select name="house_id" id="house_id" class="form-control">
                                             @if($house)
                                                 @foreach($house as $houses)
                                                     <option value="{{ $houses->id }}"> {{ $houses->name }} </option>
@@ -128,6 +128,10 @@
                                                 <option>No Houses Available</option>
                                             @endif
                                         </select>
+
+                                        <span class="input-group-addon">
+                                            <a href="{{ route('create-house') }}" style="color: #069C06;"> <i class="fa fa-plus"></i> </a>
+                                        </span>
                                     </div>
 
                                 </div>
