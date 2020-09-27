@@ -70,9 +70,9 @@
                                             <i class="fa fa-question"></i>
                                         </span>
                                         <select name="status" id="status" class="form-control" >
-                                            <option value="vacant"> Vacant </option>
-                                            <option value="renovation"> Under Renovation </option>
-                                            <option value="occupied"> Occupied </option>
+                                            <option value="Vacant"> Vacant </option>
+                                            <option value="Renovation"> Under Renovation </option>
+                                            <option value="Occupied"> Occupied </option>
                                         </select>
                                     </div>
 

@@ -73,7 +73,9 @@ class RoomController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Room::find($id);
+
+        return view('admin.single-room', compact('data'));
     }
 
     /**
