@@ -111,6 +111,8 @@ class RoomController extends Controller
     }
 
     public function delete($id){
-        //
+        $room = Room::find($id);
+
+        return view('admin.delete-room', compact('room'));
     }
 }
