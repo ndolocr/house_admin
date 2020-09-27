@@ -22,7 +22,7 @@ Auth::routes();
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 //House Routes
-Route::get('/house', [App\Http\Controllers\HouseController::class, 'index'])->name('all-houses');
+Route::get('/houses', [App\Http\Controllers\HouseController::class, 'index'])->name('all-houses');
 Route::post('/house/store', [App\Http\Controllers\HouseController::class, 'store'])->name('store-house');
 Route::get('/house/edit/{id}', [App\Http\Controllers\HouseController::class, 'edit'])->name('edit-house');
 Route::get('/house/show/{id}', [App\Http\Controllers\HouseController::class, 'show'])->name('show-house');
@@ -32,5 +32,5 @@ Route::put('/house/update/{id}', [App\Http\Controllers\HouseController::class, '
 Route::delete('/house/destroy/{id}', [App\Http\Controllers\HouseController::class, 'destroy'])->name('destroy-house');
 
 //Room Routes
-
+Route::get('/rooms', [App\Http\Controllers\RoomController::class, 'index'])->name('all-rooms');
 
