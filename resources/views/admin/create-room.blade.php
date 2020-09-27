@@ -120,7 +120,13 @@
                                             <i class="fa fa-home"></i>
                                         </span>
                                         <select name="house" id="house" class="form-control">
-                                            <option value=""></option>
+                                            @if($house)
+                                                @foreach($house as $houses)
+                                                    <option value="{{ $houses->id }}"> {{ $houses->name }} </option>
+                                                @endforeach
+                                            @else
+                                                <option>No Houses Available</option>
+                                            @endif
                                         </select>
                                     </div>
 
