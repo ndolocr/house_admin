@@ -2,6 +2,7 @@
 
 namespace App\Models;
 use App\Models\House;
+use App\Models\Tenant;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
