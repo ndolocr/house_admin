@@ -184,7 +184,7 @@
                                 <div class="form-actions" style="border: none !important">
                                     {{ Form::hidden('_method', 'PUT') }}
                                     {{ Form::submit('Save', ['class' => 'btn blue uppercase']) }}
-                                    {{ Form::reset('Cancel', ['class' => 'btn red uppercase']) }}
+                                    <a href="{{ route('all-rooms') }}" class='btn red sbold uppercase'> Cancel  </a>
                                 </div>
                                 <!-- BEGIN FORM ACTION SECTION -->
 
