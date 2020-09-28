@@ -13,4 +13,8 @@ class Room extends Model
     public function house(){
     	return $this->belongsTo(House::class);
     }
+
+    public function tenant(){
+    	return $this->belongsToMany(Tenant::class);
+    }
 }
