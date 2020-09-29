@@ -189,7 +189,7 @@
                         <!-- END EVENTS SIDE MENU -->
 
                         <!-- BEGIN ACTIVITY SIDE MENU -->
-                        <li class="nav-item @yield('activity-active') ">
+                        <li class="nav-item @yield('tenants-active') ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-users"></i>
                                 <span class="title">Tenants</span>
@@ -197,12 +197,12 @@
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="" class="nav-link ">
+                                    <a href="{{ route('create-tenants') }}" class="nav-link ">
                                         <span class="title">Add New</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="" class="nav-link ">
+                                    <a href="{{ route('all-tenants') }}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
