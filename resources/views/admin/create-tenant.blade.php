@@ -25,7 +25,7 @@
             <!-- END MESSAGES -->
             
             <!-- BEGIN FORM CREATION -->
-            {!! Form::Open( ['action' => 'TenantController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
+            {!! Form::Open( ['route' => 'store-tenants', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
                 
                 <!-- BEGIN FIRST FORM SECTION COLUMN-->
                 <div class="col-md-6">
