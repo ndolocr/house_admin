@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Room;
 use Illuminate\Http\Request;
 
 class TenantController extends Controller
@@ -23,7 +23,8 @@ class TenantController extends Controller
      */
     public function create()
     {
-        return view('admin.create-tenant');
+        $data = Room::all();
+        return view('admin.create-tenant', compact('data'));
     }
 
     /**
