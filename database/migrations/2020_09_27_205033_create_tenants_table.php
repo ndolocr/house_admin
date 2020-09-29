@@ -23,7 +23,7 @@ class CreateTenantsTable extends Migration
             $table->string('passport_picture');
             $table->integer('id_number')->unique();
             $table->integer('phone_number')->unique();
-            $table->string('middle_name')->nullable()
+            $table->string('middle_name')->nullable();
             $table->timestamps();
         });
     }
