@@ -417,7 +417,7 @@
                     <!-- END SAMPLE FORM PORTLET-->
 
                 </div>
-                <!-- END SECOND FORM SECTION COLUMN --
+                <!-- END SECOND FORM SECTION COLUMN -->
 
             {!! Form::close() !!}
             <!-- END FORM CREATION -->

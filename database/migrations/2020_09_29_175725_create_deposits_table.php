@@ -15,6 +15,10 @@ class CreateDepositsTable extends Migration
     {
         Schema::create('deposits', function (Blueprint $table) {
             $table->id();
+            $table->integer('room_deposit');
+            $table->integer('water_deposit');
+            $table->unsignedInteger('tenant_id');
+            $table->integer('electricity_deposit');
             $table->timestamps();
         });
     }
