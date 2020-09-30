@@ -15,6 +15,7 @@ class CreateTenantsTable extends Migration
     {
         Schema::create('tenants', function (Blueprint $table) {
             $table->id();
+            $table->text('details');
             $table->string('id_scan');
             $table->string('contract');
             $table->string('last_name');

@@ -35,7 +35,24 @@ class TenantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Perform Validations
+        $this->validate(
+            $request,
+            [
+                'email'=>'required',
+                'details'=>'required',
+                'contract'=>'required',
+                'id_number'=>'required',
+                'last_name'=>'required',
+                'first_name'=>'required',
+                'middle_name'=>'required',
+                'phone_number'=>'required',
+                'rent_payable_on'=>'required',
+                'tenancy_begins_on'=>'required',
+                'id_scan'=>'image|nullable|max:1999',
+                'passport_picture'=>'image|nullable|max:1999'
+            ]
+        );
     }
 
     /**

@@ -204,14 +204,6 @@
                                     </div>
 
                                 </div>
-                                <!-- END FORM GROUP -->
-
-                                <!-- BEGIN FORM ACTION SECTION -->
-                                <!--<div class="form-actions" style="border: none !important">
-                                    {{  Form::submit('Save', ['class' => 'btn blue uppercase']) }}
-                                    {{ Form::reset('Cancel', ['class' => 'btn red uppercase']) }}
-                                </div> -->
-                                <!-- BEGIN FORM ACTION SECTION -->
 
                             </div>
                         
