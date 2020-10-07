@@ -282,14 +282,14 @@
                         -->
                         <!-- END SERVICE PROVIDER SIDE MENU -->
                         
-                        <!-- BEGIN MESSAGE SIDE MENU -->
+                        <!-- BEGIN DEPOSIT AND RENT SETTINGS SIDE MENU -->
                         
                         <li class="heading">
                             <h3 class="uppercase">Settings</h3>
                         </li>
                         
                         
-                        <li class="nav-item @yield('messages-active') ">
+                        <li class="nav-item @yield('deposit-rent-settings-active') ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-cogs"></i>
                                 <span class="title">Deposit and Rent</span>
@@ -297,18 +297,18 @@
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="" class="nav-link ">
+                                    <a href="{{ route('create-deposit-rent-settings') }}" class="nav-link ">
                                         <span class="title">Add New</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="" class="nav-link ">
+                                    <a href="{{ route('all-deposit-rent-settings') }}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
                             </ul>
                         </li>
-                        <!-- END MESSAGE SIDE MENU -->
+                        <!-- END DEPOSIT AND RENT SETTINGS SIDE MENU -->
 
 
                         <li class="heading">
