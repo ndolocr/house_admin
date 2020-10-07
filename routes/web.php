@@ -50,3 +50,14 @@ Route::get('/tenants/create', [App\Http\Controllers\TenantController::class, 'cr
 Route::get('/tenants/delete/{id}', [App\Http\Controllers\TenantController::class, 'delete'])->name('delete-tenants');
 Route::put('/tenants/update/{id}', [App\Http\Controllers\TenantController::class, 'update'])->name('update-tenants');
 Route::delete('/tenants/destroy/{id}', [App\Http\Controllers\TenantController::class, 'destroy'])->name('destroy-tenants');
+
+
+//Deposit and Rent Setting Routes
+Route::get('/deposit-rent-settings', [App\Http\Controllers\DepositRentSettingController::class, 'index'])->name('all-deposit-rent-settings');
+Route::post('/deposit-rent-settings/store', [App\Http\Controllers\DepositRentSettingController::class, 'store'])->name('store-deposit-rent-settings');
+Route::get('/deposit-rent-settings/edit/{id}', [App\Http\Controllers\DepositRentSettingController::class, 'edit'])->name('edit-deposit-rent-settings');
+Route::get('/deposit-rent-settings/show/{id}', [App\Http\Controllers\DepositRentSettingController::class, 'show'])->name('show-deposit-rent-settings');
+Route::get('/deposit-rent-settings/create', [App\Http\Controllers\DepositRentSettingController::class, 'create'])->name('create-deposit-rent-settings');
+Route::get('/deposit-rent-settings/delete/{id}', [App\Http\Controllers\DepositRentSettingController::class, 'delete'])->name('delete-deposit-rent-settings');
+Route::put('/deposit-rent-settings/update/{id}', [App\Http\Controllers\DepositRentSettingController::class, 'update'])->name('update-deposit-rent-settings');
+Route::delete('/deposit-rent-settings/destroy/{id}', [App\Http\Controllers\DepositRentSettingController::class, 'destroy'])->name('destroy-deposit-rent-settings');
