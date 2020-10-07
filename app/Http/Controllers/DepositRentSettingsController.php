@@ -13,7 +13,7 @@ class DepositRentSettingsController extends Controller
      */
     public function index()
     {
-        //
+        return "Viewing all Deposit and Rent Settings";
     }
 
     /**
@@ -23,7 +23,7 @@ class DepositRentSettingsController extends Controller
      */
     public function create()
     {
-        //
+        return "Creating all Deposit and Rent Settings";
     }
 
     /**
@@ -34,7 +34,7 @@ class DepositRentSettingsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "Saving all Deposit and Rent Settings";
     }
 
     /**
@@ -45,7 +45,7 @@ class DepositRentSettingsController extends Controller
      */
     public function show($id)
     {
-        //
+        return "Showing single Deposit and Rent Settings";
     }
 
     /**
@@ -56,7 +56,7 @@ class DepositRentSettingsController extends Controller
      */
     public function edit($id)
     {
-        //
+        return "Editing single Deposit and Rent Settings";
     }
 
     /**
@@ -68,7 +68,7 @@ class DepositRentSettingsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return "Updating single Deposit and Rent Settings";
     }
 
     /**
@@ -79,6 +79,6 @@ class DepositRentSettingsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return "Deleting single Deposit and Rent Settings";
     }
 }

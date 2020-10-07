@@ -15,7 +15,15 @@ class CreateDepositRentSettingsTable extends Migration
     {
         Schema::create('deposit_rent_settings', function (Blueprint $table) {
             $table->id();
+            $table->text('details');
+            $table->unsignedInteger('room_id');
+            $table->decimal('rent_amount', 10,2);
+            $table->decimal('room_deposit', 10,2);
+            $table->decimal('water_deposit', 10,2);
+            $table->decimal('electricity_deposit', 10,2);
             $table->timestamps();
+
+            $table->foreign('room_id')->references('id')->on('rooms')->onDelete('cascade');
         });
     }
 
