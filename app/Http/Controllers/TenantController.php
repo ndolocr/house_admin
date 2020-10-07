@@ -127,8 +127,8 @@ class TenantController extends Controller
         $data->passport_picture = $passport_picture_nameToStore;
 
         //Dates
-        $data->rent_payable_on = $request->get('rent_payable_on');
-        $data->tenancy_begins_on = $request->get('tenancy_begins_on');
+        //$data->rent_payable_on = $request->get('rent_payable_on');
+        //$data->tenancy_begins_on = $request->get('tenancy_begins_on');
 
         //Save data
         $data->save();
@@ -183,3 +183,4 @@ class TenantController extends Controller
         //
     }
 }
+
