@@ -285,6 +285,33 @@
                         <!-- BEGIN MESSAGE SIDE MENU -->
                         
                         <li class="heading">
+                            <h3 class="uppercase">Settings</h3>
+                        </li>
+                        
+                        
+                        <li class="nav-item @yield('messages-active') ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-cogs"></i>
+                                <span class="title">Deposit and Rent</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="" class="nav-link ">
+                                        <span class="title">Add New</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="" class="nav-link ">
+                                        <span class="title">View All</span>
+                                    </a>
+                                </li>                                
+                            </ul>
+                        </li>
+                        <!-- END MESSAGE SIDE MENU -->
+
+
+                        <li class="heading">
                             <h3 class="uppercase">Messages</h3>
                         </li>
                         
