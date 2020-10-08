@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Room;
 use Illuminate\Http\Request;
 
 class DepositRentSettingsController extends Controller
@@ -23,7 +24,8 @@ class DepositRentSettingsController extends Controller
      */
     public function create()
     {
-        return "Creating all Deposit and Rent Settings";
+        $data = Room::all();
+        return view("admin.create-deposit-rent-settings", compact("data"));
     }
 
     /**
