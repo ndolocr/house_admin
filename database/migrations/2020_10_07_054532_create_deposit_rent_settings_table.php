@@ -17,7 +17,7 @@ class CreateDepositRentSettingsTable extends Migration
             $table->id();
             $table->text('details');
             $table->unsignedInteger('room_id');
-            $table->decimal('rent_amount', 10,2);
+            $table->decimal('monthly_rent', 10,2);
             $table->decimal('room_deposit', 10,2);
             $table->decimal('water_deposit', 10,2);
             $table->decimal('electricity_deposit', 10,2);

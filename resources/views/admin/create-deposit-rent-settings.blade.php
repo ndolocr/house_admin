@@ -6,7 +6,7 @@
 
 @section('page-title') Deposit & Rent Settings @endsection
 
-@section('tenants-active') start active open @endsection
+@section('deposit-rent-settings-active') start active open @endsection
 
 @section('content')
     <!-- BEGIN ROW -->
@@ -67,13 +67,27 @@
 
                                 <!-- BEGIN FORM GROUP -->
                                 <div class="form-group">
-                                    <label name="room_deposit" >Room Deposit Paid</label>
+                                    <label name="room_deposit" >Monthly Rent </label>
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-calendar-o"></i>
+                                        </span>
+                                        <input type="number" name="monthly_rent" id="monthly_rent" class="form-control" placeholder="Monthly Rent">
+                                    </div>
+
+                                </div>
+                                <!-- END FORM GROUP -->
+
+                                <!-- BEGIN FORM GROUP -->
+                                <div class="form-group">
+                                    <label name="room_deposit" >Room Deposit </label>
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="fa fa-money"></i>
                                         </span>
-                                        <input type="number" name="room_deposit" id="room_deposit" class="form-control" placeholder="Room Deposit Paid">
+                                        <input type="number" name="room_deposit" id="room_deposit" class="form-control" placeholder="Room Deposit">
                                     </div>
 
                                 </div>
@@ -81,13 +95,13 @@
 
                                 <!-- BEGIN FORM GROUP -->
                                 <div class="form-group">
-                                    <label name="electricity_deposit" >Electricity Deposit Paid</label>
+                                    <label name="electricity_deposit" >Electricity Deposit </label>
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="fa fa-bolt"></i>
                                         </span>
-                                        <input type="number" name="electricity_deposit" id="electricity_deposit" class="form-control" placeholder="Electricity Deposit Paid">
+                                        <input type="number" name="electricity_deposit" id="electricity_deposit" class="form-control" placeholder="Electricity Deposit">
                                     </div>
 
                                 </div>
@@ -95,13 +109,13 @@
 
                                 <!-- BEGIN FORM GROUP -->
                                 <div class="form-group">
-                                    <label name="water_deposit" >Water Deposit Paid</label>
+                                    <label name="water_deposit" >Water Deposit </label>
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="fa fa-tint"></i>
                                         </span>
-                                        <input type="number" name="water_deposit" id="water_deposit" class="form-control" placeholder="Water Deposit Paid">
+                                        <input type="number" name="water_deposit" id="water_deposit" class="form-control" placeholder="Water Deposit">
                                     </div>
 
                                 </div>
