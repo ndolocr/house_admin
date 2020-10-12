@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Room;
 use Illuminate\Http\Request;
+use App\Models\DepositRentSetting;
 
 class DepositRentSettingsController extends Controller
 {
@@ -14,7 +15,9 @@ class DepositRentSettingsController extends Controller
      */
     public function index()
     {
-        return "Viewing all Deposit and Rent Settings";
+        $data = use App\Models\DepositRentSetting::all();
+
+        return view("admin.all-deposit-rent-settings", compact("data"));
     }
 
     /**

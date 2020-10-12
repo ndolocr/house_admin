@@ -1,10 +1,10 @@
 @extends('layouts.adminMaster')
 
-@section('title') Houses @endsection
+@section('title') Deposit & Rent Settings @endsection
 
-@section('page-title') Houses @endsection
+@section('page-title') Deposit & Rent Settings @endsection
 
-@section('houses-active') start active open @endsection
+@section('deposit-rent-settings-active') start active open @endsection
 
 @section('content')
 	<!-- BEGIN ROW -->
@@ -13,7 +13,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             
             <!-- BEGIN PAGE TITLE-->
-            <h3 class="page-title"> Houses
+            <h3 class="page-title"> Deposit and Rent Settings
                 <small>view all</small>
             </h3>
             <!-- END PAGE TITLE-->
@@ -27,10 +27,10 @@
                 <thead>
                     <tr>
                         <th></th>              
-                        <th> House Name </th>
-                        <th> Plot Number </th>
-                        <th> County </th>
-                        <th> Street </th>
+                        <th> Room </th>
+                        <th> Room Deposit </th>
+                        <th> Water Deposit </th>
+                        <th> Electricity Deposit </th>
                         <th> View </th>
                         <th> Edit </th>
                         <th> Delete </th>
@@ -38,15 +38,15 @@
                 </thead>
                 <tbody>
                     
-                    @if($houses)
+                    @if($data)
                         
-                        @foreach($houses as $house)
+                        @foreach($data as $datas)
                             <tr>
                                 <td> {{ $loop->iteration }} </td>
-                                <td> {{ $house->name }} </td>
-                                <td> {{ $house->plot_number }} </td>
-                                <td> {{ $house->county }} </td>
-                                <td> {{ $house->street}} </td>
+                                <td> {{ $datas->room_id }} </td>
+                                <td> {{ $datas->plot_number }} </td>
+                                <td> {{ $datas->county }} </td>
+                                <td> {{ $datas->street}} </td>
                                 <td>
                                     <a href="{{ route('show-house', $house->id) }}" class='btn green btn-outline sbold uppercase'> <i class='fa fa-eye'></i> </a>
                                 </td>
