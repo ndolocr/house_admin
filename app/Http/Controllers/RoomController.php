@@ -148,5 +148,9 @@ class RoomController extends Controller
 
         return view('admin.delete-room', compact('room'));
     }
+
+    public function get_rooms($id){
+        
+    }
 }
 

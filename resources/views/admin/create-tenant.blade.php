@@ -440,3 +440,30 @@
     <!-- END ROW --> 
 
 @endsection
+
+@section('scripts')
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+
+            jQuery('select[name="house_id"]').on('change', function(){
+                var houseId = jQuery(this).val();
+
+                if(houseId){
+                    jQuery.ajax({
+                        url: '/get_rooms/' +houseId,
+                        type: "GET",
+                        dataType: "json",
+                        success:function(data){
+                            jQuery('select[name="room_id"]').empty(); //Remove all the last selected items
+                            jQuery.each(data, function(key,value){
+                                $('select[name="room_id"]').append('<option value="'+ key +'">'+ value +'</option>');
+                            });
+                        }
+                    });
+                }else{
+                    $('select[name="room_id"]').empty();
+                }
+            });
+        });
+    </script>
+@endsection

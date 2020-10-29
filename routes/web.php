@@ -20,6 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+Route::get('/get_rooms/{id}', [App\Http\Controllers\RoomController::class, 'get_rooms'])->name('get-rooms');
 
 //Room Routes
 Route::get('/rooms', [App\Http\Controllers\RoomController::class, 'index'])->name('all-rooms');
