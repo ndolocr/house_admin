@@ -29,7 +29,7 @@
             </div>
             <div class="details">
                 <div class="number">
-                    <span data-counter="counterup" data-value="700">0</span>
+                    <span data-counter="counterup" data-value="{{ $house_count }}">0</span>
                 </div>
                 <div class="desc"> Our Houses </div>
             </div>
@@ -45,7 +45,7 @@
             </div>
             <div class="details">
                 <div class="number">
-                    <span data-counter="counterup" data-value="200"></span> 
+                    <span data-counter="counterup" data-value="{{ $room_count }}">0</span> 
                 </div>
                 <div class="desc"> Our Rooms </div>
             </div>
@@ -85,6 +85,24 @@
             </a>
         </div>
     </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="dashboard-stat red">
+            <div class="visual">
+                <i class="fa fa-bed"></i>
+            </div>
+            <div class="details">
+                <div class="number">
+                    <span data-counter="counterup" data-value="{{ $vacant_rooms_count }}">0</span> 
+                </div>
+                <div class="desc"> Vacant Rooms </div>
+            </div>
+            <a class="more" href=""> View more
+                <i class="m-icon-swapright m-icon-white"></i>
+            </a>
+        </div>
+    </div>
+
 </div>
 <div class="clearfix"></div>
 <!-- END DASHBOARD STATS 1-->    
