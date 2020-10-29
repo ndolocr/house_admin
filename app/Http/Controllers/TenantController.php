@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Room;
+use App\Models\House;
 use App\Models\Tenant;
 use Illuminate\Http\Request;
 
@@ -24,8 +26,10 @@ class TenantController extends Controller
      */
     public function create()
     {
-        $data = Room::all();
-        return view('admin.create-tenant', compact('data'));
+        $room = Room::all();
+        $house = House::all();
+
+        return view('admin.create-tenant', compact('house'));
     }
 
     /**

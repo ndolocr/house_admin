@@ -236,17 +236,37 @@
 
                                 <!-- BEGIN FORM GROUP -->
                                 <div class="form-group">
-                                    <label name="room_id" >House and Room </label>
+                                    <label name="room_id" >House </label>
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="fa fa-home"></i>
                                         </span>
         
-                                        <select name="room_id" id="room_id" class="form-control">
-                                            @foreach($data as $room)
-                                                <option value="{{ $room->id }}"> {{ $room->house->name }} - {{ $room->name }} </option>       
+
+                                        <select name="house_id" id="house_id" class="form-control">
+                                            <option selected="false"> Select House...  </option> 
+                                            @foreach($house as $houses)
+                                                <option value="{{ $houses->id }}"> {{ $houses->name }}  </option>       
                                             @endforeach                             
+                                        </select>
+        
+                                    </div>
+
+                                </div>
+                                <!-- END FORM GROUP -->
+
+                                <!-- BEGIN FORM GROUP -->
+                                <div class="form-group">
+                                    <label name="room_id" >Room </label>
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-bed"></i>
+                                        </span>
+
+                                        <select name="room_id" id="room_id" class="form-control">
+                                            <option selected="false"> Select Room...  </option>       
                                         </select>
         
                                     </div>
