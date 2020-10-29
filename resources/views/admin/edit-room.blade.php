@@ -72,8 +72,9 @@
                                         <select name="status" id="status" class="form-control" >
                                             <option value="{{$data->status}}"> {{$data->status}} </option>
                                             <option value="Vacant"> Vacant </option>
-                                            <option value="Renovation"> Under Renovation </option>
                                             <option value="Occupied"> Occupied </option>
+                                            <option value="Not Renovated"> Not Renovation </option>
+                                            <option value="Under Renovation"> Under Renovation </option>
                                         </select>
                                     </div>
 

@@ -33,10 +33,22 @@ class HomeController extends Controller
         $vacant_rooms = Room::Where('status', 'Vacant');
         $vacant_rooms_count = $vacant_rooms->count();
 
+        /* Getting total number of occupied room available from the database */
+        $occupied_rooms = Room::Where('status', 'Occupied');
+        $occupied_rooms_count = $occupied_rooms->count();
+
+        /* Getting total number of occupied room available from the database */
+        $not_renovated_rooms = Room::Where('status', 'Not Renovated');
+        $not_renovated_rooms_count = $not_renovated_rooms->count();
+
+        /* Getting total number of occupied room available from the database */
+        $under_renovation_rooms = Room::Where('status', 'Under Renovation');
+        $under_renovation_rooms_count = $under_renovation_rooms->count();
+
         /* Getting total number of houses from the database */
         $house = House::all();
         $house_count = $house->count();
 
-        return view('admin.dashboard', compact('house_count', 'room_count', 'vacant_rooms_count'));
+        return view('admin.dashboard', compact('house_count', 'room_count', 'vacant_rooms_count', 'occupied_rooms_count', 'under_renovation_rooms_count', 'not_renovated_rooms_count'));
     }
 }
