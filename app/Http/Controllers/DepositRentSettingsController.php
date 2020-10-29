@@ -15,7 +15,7 @@ class DepositRentSettingsController extends Controller
      */
     public function index()
     {
-        $data = use App\Models\DepositRentSetting::all();
+        $data = DepositRentSetting::all();
 
         return view("admin.all-deposit-rent-settings", compact("data"));
     }

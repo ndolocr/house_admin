@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Room;
 use App\Models\House;
 use Illuminate\Http\Request;
@@ -148,3 +149,4 @@ class RoomController extends Controller
         return view('admin.delete-room', compact('room'));
     }
 }
+
